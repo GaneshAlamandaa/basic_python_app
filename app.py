@@ -1,5 +1,12 @@
 from flask import Flask
+from bp.enduser import enduser_bp
+
+
 app = Flask(__name__)
+
+
+
+app.register_blueprint(enduser_bp)
 
 @app.route('/') 
 def hello_world(): 
